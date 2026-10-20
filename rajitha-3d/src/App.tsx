@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState } from 'react'
 import type { FormEvent } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-const HeroScene = lazy(() => import('./HeroScene'))
+const ProjectShowcase3D = lazy(() => import('./ProjectShowcase3D'))
 import {
   ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight,
   Box, Building2, CheckCircle2, Download, ExternalLink,
@@ -126,7 +126,7 @@ function App() {
         </button>
       </header>
 
-      <section className="hero" id="home">
+      <section data-bim-section="true" className="hero" id="home">
         <div className="hero-copy">
           <motion.div className="eyebrow" initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <span className="status-dot" /> STRUCTURAL DESIGN · BIM · ENGINEERING
@@ -157,7 +157,7 @@ function App() {
           <div className="visual-orbit orbit-one" />
           <div className="visual-orbit orbit-two" />
           <div className="scene-label scene-label-top"><span>STRUCTURE_001</span><span>3D MODEL</span></div>
-          <div className="scene-canvas"><Suspense fallback={<div className="scene-fallback">Loading 3D structural model…</div>}><HeroScene /></Suspense></div>
+          <div className="scene-canvas"><Suspense fallback={<div className="scene-fallback">Loading 3D structural model…</div>}><ProjectShowcase3D /></Suspense></div>
           <div className="scene-label scene-label-bottom"><span>FRAME SYSTEM</span><span>ROTATE TO EXPLORE ↗</span></div>
           <div className="floating-tag"><Box size={15} /><span>Built in 3D</span></div>
           <div className="coordinate">X 00.12<br />Y 04.80<br />Z 12.40</div>
@@ -165,7 +165,7 @@ function App() {
         <a className="scroll-cue" href="#about"><span>SCROLL TO DISCOVER</span><ArrowDown size={15} /></a>
       </section>
 
-      <section className="intro section-wrap" id="about">
+      <section data-bim-section="true" className="intro section-wrap" id="about">
         <div className="section-kicker"><span>01 / THE APPROACH</span><span>ABOUT ME</span></div>
         <div className="intro-grid">
           <div className="portrait-frame">
@@ -187,7 +187,7 @@ function App() {
         </div>
       </section>
 
-      <section className="profile-section section-wrap" id="profile">
+      <section data-bim-section="true" className="profile-section section-wrap" id="profile">
         <div className="section-kicker">
           <span>02 / QUALIFICATIONS</span>
           <span>EDUCATION & TECHNICAL PROFILE</span>
@@ -299,7 +299,7 @@ function App() {
         </p>
       </section>
 
-      <section className="projects-section section-wrap" id="projects">
+      <section data-bim-section="true" className="projects-section section-wrap" id="projects">
         <div className="section-kicker"><span>02 / SELECTED WORK</span><span>PROJECT ARCHIVE</span></div>
         <div className="section-heading">
           <div><p className="small-overline">A STUDY IN STRUCTURE</p><h2>Work in <span className="serif">progress.</span></h2></div>
@@ -331,7 +331,7 @@ function App() {
         </motion.div>
       </section>
 
-      <section className="credentials section-wrap" id="credentials">
+      <section data-bim-section="true" className="credentials section-wrap" id="credentials">
         <div className="section-kicker"><span>03 / LEARNING</span><span>TECHNICAL DEVELOPMENT</span></div>
         <div className="credential-grid">
           <div className="credential-copy">
@@ -349,7 +349,7 @@ function App() {
         </div>
       </section>
 
-      <section className="contact-section section-wrap" id="contact">
+      <section data-bim-section="true" className="contact-section section-wrap" id="contact">
         <div className="section-kicker"><span>04 / GET IN TOUCH</span><span>CONTACT</span></div>
         <div className="contact-grid">
           <div>
